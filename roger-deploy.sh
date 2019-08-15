@@ -31,7 +31,7 @@ if [ $# -eq 0 ]; then
 							 git commit -m "$1"
 							  git push
 							   echo "Git repository updated. Now running update on server."
-							    ssh skrystin@192.168.56.3 -p 2222 "./update_server.sh && exit"
+							    ssh skrystin@192.168.56.3 -p 2222 "cd /var/www/html/rogerskyline && git pull && exit"
 								 exit 0
 							 fi
 
